@@ -2,7 +2,7 @@
 #include <ESP8266mDNS.h>
 #include <ArduinoOTA.h>          // Библиотека для Обновления по ОТА
 #include <PubSubClient.h>        // MQTT клиент
-#include <ESP8266WebServer.h>    // Библиотека для ВебСерваера
+#include <ESP8266WebServer.h>    // Библиотека для Веб Сервера
 #include <WiFiManager.h>         // https://github.com/tzapu/WiFiManager
 #include "secrets.txt"           // Файл с паролями и настройками IP
 #include <Bounce2.h>             // Библиотека антидребезга.
@@ -18,14 +18,14 @@
 #define OUTPUT_1    16      // Выход 1
 #define OUTPUT_2    12      // Выход 2
 #define OUTPUT_3    4       // Выход 3
-#define BUTTON_PRG  0       // кнопка на плате, она для программирования
+#define BUTTON_PRG  0       // кнопка на плате, она же для программирования
 #define ADC_1       A0      // аналоговый вход
 
 // ************************************************
 // Переменные
 // ************************************************
 
-unsigned long  currentTimeMain, loopTimeMain, currentTime5sec, loopTime5sec;  // Переменые для главного цикла
+unsigned long  currentTimeMain, loopTimeMain, currentTime5sec, loopTime5sec;  // Переменные для главного цикла
 unsigned int onesecond = 1000;                                                // одна секунда в милисекундах
 unsigned int fivesecond = 5000;                                               // пять секунд в милисекундах
 const float Vout = 5.056;                                                     // опорное напряжение для аналогово входа
